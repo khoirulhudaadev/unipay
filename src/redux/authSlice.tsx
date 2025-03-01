@@ -3,38 +3,29 @@ import { authInterface } from "../utils/interfaces/authInterface";
 
 interface authStates {
     auth: authInterface,
-    token: string
+    token: string | null
 }
 
 const initialState: authStates = {
-    auth: {
-        email: "",
-        number_telephone: "",
-        fullName: "",
-        gender: "",
-        NIK: "",
-        NIM: "",
-        prodi: "",
-        type_photo: ""
-    },
-    token: ""
+    auth: {},
+    token: null
 }
 
 const authSlice: any = createSlice({
     name: 'auth',
     initialState,
     reducers: {
-        authSignIn: (state, action:PayloadAction<authInterface>) => {
+        authSignIn: (state, action: PayloadAction<authInterface>) => {
             state.auth = {
                 ...state.auth,
                 ...action.payload
-            }   
+            }
         },
         authSignOut: (state) => {
-            state.auth = initialState.auth,
-            state.token = initialState.token
+            state.auth = {},
+                state.token = null
         },
-        saveToken: (state, action:PayloadAction<string>) => {
+        saveToken: (state, action: PayloadAction<string>) => {
             state.token = action.payload
         }
     }
