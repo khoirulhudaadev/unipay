@@ -1,8 +1,12 @@
 const toRupiah = (angka: any) => {
-    return new Intl.NumberFormat('id-ID', {
-      style: 'currency',
-      currency: 'IDR',
-    }).format(angka);
-  }
+  // Pastikan angka valid
+  if (isNaN(angka)) return 'Data tidak valid';
 
-  export default toRupiah
+  // Format angka dengan pemisah ribuan
+  const formatted = angka.toLocaleString('id-ID');
+
+  // Gabungkan dengan "Rp" tanpa spasi
+  return `Rp${formatted}`;
+};
+
+export default toRupiah;
