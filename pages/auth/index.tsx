@@ -4,6 +4,7 @@ import '@/app/globals.css'
 import SweetAlert from '@/components/alert/sweetAlert'
 import FormGroup from "@/components/formGroup"
 import Sidebar from "@/components/sidebar"
+import SidebarAuth from '@/components/sidebarAuth'
 import { authSignOut } from "@/redux/authSlice"
 import store from '@/redux/store'
 import { useEffect, useState } from "react"
@@ -42,7 +43,7 @@ const Auth = () => {
     <div className="flex h-screen w-screen bg-blue-100">
 
       {/* Sidebar */}
-      <Sidebar type="auth" />
+      <SidebarAuth />
 
       <div className="relative md:ml-[36%] w-full md:w-[64%] bg-blue-400 h-full border-box pb-6 px-2 md:px-6 pt-5">
         <div className="rounded-lg p-4 w-full">

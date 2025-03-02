@@ -17,7 +17,7 @@ api.interceptors.request.use(async function (config) {
 
   if (token) {
     config.headers["Authorization"] = token;
-    console.log('token', token)
+    // console.log('token', token)
   }
 
   // Periksa apakah permintaan mengandung file
@@ -36,13 +36,13 @@ api.interceptors.request.use(async function (config) {
 // Tambahkan interceptor respons
 api.interceptors.response.use(function (response) {
 
-  console.log('response interceptors:', response)
+  // console.log('response interceptors:', response)
   return response
 
 }, function (error) {
 
   console.log('error interceptors:', error)
-  if (error.response && error.response.status === 403) {
+  if (error.response && error.response.status === 403 && window.location.pathname !== '/auth') {
     console.log("error interceptors new:", error)
     window.location.pathname = '/auth'
   }
