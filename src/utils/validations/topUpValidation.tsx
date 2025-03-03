@@ -34,12 +34,15 @@ export const paymentTopUpUseFormik = ({ onError, onResponse }: {onError: any, on
                 classRoom: values.classRoom
             }
 
+            console.log('data', data)
+            
             if(values.amount < 9999) {
                 onError('Minimal Rp. 10.000')
             }else {
                 const response = await API.topUp(data)
                 
                 if(response.data.status === 200) {
+                    console.log('response', response)
                     onResponse(response.data.message)
                     resetForm()
                     const invoiceUrl = response.data.data.invoiceUrl;
