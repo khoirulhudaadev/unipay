@@ -513,7 +513,12 @@ const FormGroup = ({
                     <p>Lupa password? <Link href={'/auth/forgotPassword'} className='cursor-pointer text-blue-900 hover:brightness-[90%]'>Klik disini</Link></p>
                     <hr className='my-6 border-white' />
                     <div className='md:flex h-max items-center'>
-                        <Button status='primary' typeButton='submit' text='Masuk sekarang' />
+                        <div className='md:flex hidden'>
+                            <Button status='primary' typeButton='submit' text='Masuk sekarang' />
+                        </div>
+                        <div className='md:hidden flex'>
+                            <Button status='white' typeButton='submit' text='Masuk sekarang' />
+                        </div>
                         <p className='mt-[20px] md:mt-0 md:ml-4'>Belum punya akun ? <span onClick={onClick} className='text-blue-900 cursor-pointer hover:brightness-[90%]'>Daftar</span></p>
                     </div>
                 </form>

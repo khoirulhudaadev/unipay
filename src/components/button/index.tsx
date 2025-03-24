@@ -76,11 +76,14 @@ const Button = ({
                 <button
                     type={typeButton}
                     onClick={isDisabled ? () => null : handleClick}
-                    className={`${style} shadow-lg h-max px-[20px] py-[12px] ${status === 'primary' && !isDisabled
-                        ? "bg-blue-500 hover:brightness-[92%] active:scale-[0.97] cursor-pointer"
-                        : status === 'delete' && !isDisabled
-                            ? "bg-red-400 hover:brightness-[92%] active:scale-[0.99] cursor-pointer"
-                            : "bg-slate-300 cursor-not-allowed"
+                    className={`${style} shadow-lg h-max px-[20px] py-[12px] 
+                        ${status === 'primary' && !isDisabled
+                            ? "bg-blue-500 hover:brightness-[92%] active:scale-[0.97] cursor-pointer"
+                            : status === 'white' && !isDisabled
+                                ? "bg-white text-blue-500 hover:brightness-[92%] active:scale-[0.99] cursor-pointer"
+                                : status === 'delete' && !isDisabled
+                                    ? "bg-red-400 hover:brightness-[92%] active:scale-[0.99] cursor-pointer"
+                                    : "bg-slate-300 cursor-not-allowed"
                         } ${status === 'primary' && !isDisabled
                             ? "text-white"
                             : status === 'delete' && !isDisabled
