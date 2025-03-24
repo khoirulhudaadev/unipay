@@ -179,7 +179,7 @@ const Sidebar = ({
           </div>
 
           {/* Menu bawah */}
-          <div className='bottom-10 md:flex z-40 absolute flex items-center justify-between w-full px-5'>
+          <div className='bottom-10 hidden md:flex z-40 absolute items-center justify-between w-full px-5'>
             <div className='rounded-full cursor-pointer hover:bg-blue-600 active:scale-[0.97] bg-blue-500 text-white tect-center flex items-center justify-center w-[50px] h-[50px] mr-2' onClick={onClick}>
               <FaPlusCircle />
             </div>

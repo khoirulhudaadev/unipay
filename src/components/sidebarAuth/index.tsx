@@ -4,7 +4,7 @@ import { FaWallet } from 'react-icons/fa'
 
 const SidebarAuth = () => {
     return (
-        <div className={`fixed flex z-[99999999] left-[0%] shadow-lg md:flex top-0 w-[80vw] md:w-[36%] bg-blue-100 item-center duration-200 justify-center h-screen overflow-hidden`}>
+        <div className={`fixed z-[99999999] left-[0%] shadow-lg hidden md:flex top-0 w-[80vw] md:w-[36%] bg-blue-100 item-center duration-200 justify-center h-screen overflow-hidden`}>
 
             <div className='relative flex items-center justify-center z-[1]'>
                 <Image

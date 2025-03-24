@@ -23,7 +23,7 @@ const authSlice: any = createSlice({
         },
         authSignOut: (state) => {
             state.auth = {},
-                state.token = null
+            state.token = null
         },
         saveToken: (state, action: PayloadAction<string>) => {
             state.token = action.payload

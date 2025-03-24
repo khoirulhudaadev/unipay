@@ -45,7 +45,7 @@ const Auth = () => {
       {/* Sidebar */}
       <SidebarAuth />
 
-      <div className="relative md:ml-[36%] w-full md:w-[64%] bg-blue-400 h-full border-box pb-6 px-2 md:px-6 pt-5">
+      <div className="relative md:ml-[36%] w-full md:w-[64%] bg-blue-500 md:bg-blue-400 h-full border-box pb-6 px-2 md:px-6 pt-5">
         <div className="rounded-lg p-4 w-full">
           <FormGroup type={!statusAuth ? "signin" : "signup"} handleResponse={(e) => handleResponse(e)} handleErrorMessage={(e) => handleErrorMessage(e)} onClick={() => setStatusAuth(!statusAuth)} error={errorMessage} />
         </div>
